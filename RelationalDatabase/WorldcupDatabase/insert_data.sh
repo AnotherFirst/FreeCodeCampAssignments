@@ -11,7 +11,7 @@ fi
 
 echo $($PSQL "TRUNCATE teams, games RESTART IDENTITY")
 
-cat games.csv | while IFS="," read YEAR	ROUND	WINNER	OPPONENT	WINNER_GOALS	OPPONENT_GOALS
+cat games.csv | while IFS="," read YEAR	ROUND	WINNER OPPONENT	WINNER_GOALS OPPONENT_GOALS
 
 do
   if [[ $WINNER != "winner" ]]
